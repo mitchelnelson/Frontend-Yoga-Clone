@@ -1,0 +1,65 @@
+:root {
+  --purple-color: #d7d4ee;
+  --lightBlue-color: #f0eefd;
+  font-family: "Raleway", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--purple-color);
+  margin: 0;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  width: 75vw;
+  height: 15vh;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar span {
+  padding: 1rem;
+}
+.navbar .icon {
+  color: green;
+  margin-right: auto;
+}
+
+.content {
+  width: 75vw;
+  height: 65vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.content section {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  border: 1px solid hotpink;
+}
+.content figure {
+  border: 1px solid orange;
+  margin: 0;
+}
+.content figure image {
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  border: 1px solid blue;
+}
+
+/*# sourceMappingURL=app.css.map */
