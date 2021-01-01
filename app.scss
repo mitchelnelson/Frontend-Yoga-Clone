@@ -30,17 +30,19 @@ body {
 header {
 	color: var(--navText-color);
 	align-items: center;
+	margin: 0 2rem;
 	.navbar {
 		display: flex;
 		align-items: center;
 		width: 100%;
 		height: 100%;
 		span {
-			padding: 2rem;
+			padding-left: 6.5vw;
 		}
-		.icon {
+		#icon {
 			color: hotpink;
 			margin-right: auto;
+			padding-left: 0;
 		}
 	}
 }
@@ -62,12 +64,6 @@ header {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 45% auto;
-		.item {
-			background: linear-gradient(to right top, white, var(--background-color));
-		}
-		.item + .item {
-			background: linear-gradient(to right top, var(--background-color), #a49fc6);
-		}
 		.long {
 			grid-column: 1 / 3;
 		}
@@ -89,5 +85,24 @@ header {
 		font-size: 1.5rem;
 		font-weight: 200;
 		display: inline;
+	}
+}
+
+section {
+	.item {
+		background: linear-gradient(to right top, white, var(--background-color));
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		p {
+			align-self: flex-end;
+			margin: 0 auto 2rem 2rem;
+		}
+		span {
+			margin: 2rem 2rem 0 auto;
+		}
+	}
+	.item + .item {
+		background: linear-gradient(to right top, var(--background-color), #a49fc6);
 	}
 }
