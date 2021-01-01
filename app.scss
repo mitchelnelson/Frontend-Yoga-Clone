@@ -1,6 +1,8 @@
 :root {
-	--purple-color: #d7d4ee;
+	--background-color: #d7d4ee;
 	--lightBlue-color: #f0eefd;
+	--navText-color: #9e9695;
+	--deepPurple-color: #78699a;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -10,54 +12,82 @@
 
 html,
 body {
-	background-color: var(--purple-color);
+	background-color: var(--background-color);
 	margin: 0;
 }
 
-.centered {
+.grid-container {
+	background-color: white;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.navbar {
-	width: 75vw;
-	height: 15vh;
-	background-color: white;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	span {
-		padding: 1rem;
-	}
-	.icon {
-		color: green;
-		margin-right: auto;
-	}
-}
-
-.content {
-	width: 75vw;
-	height: 65vh;
-	background-color: white;
 	display: grid;
-	grid-template-columns: 50% 50%;
-	section {
-		display: grid;
-		grid-template-columns: 100px 100px;
-		border: 1px solid hotpink;
-	}
-	figure {
-		border: 1px solid orange;
-		margin: 0;
-		image {
-			height: 100%;
-			width: 100%;
+	grid-template-rows: 15vh 65vh;
+	grid-template-columns: 75vw;
+}
+
+header {
+	color: var(--navText-color);
+	align-items: center;
+	.navbar {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		span {
+			padding: 2rem;
+		}
+		.icon {
+			color: hotpink;
+			margin-right: auto;
 		}
 	}
 }
 
-.item {
-	border: 1px solid blue;
+.content {
+	padding: 0 2rem 2rem 2rem;
+	display: grid;
+	grid-template-columns: 31% auto;
+	grid-template-rows: 100%;
+	figure {
+		margin: 0;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+			max-height: auto;
+		}
+	}
+	section {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 45% auto;
+		.item {
+			background: linear-gradient(to right top, white, var(--background-color));
+		}
+		.item + .item {
+			background: linear-gradient(to right top, var(--background-color), #a49fc6);
+		}
+		.long {
+			grid-column: 1 / 3;
+		}
+	}
+}
+
+.yoga {
+	padding-left: 2rem;
+	h2 {
+		color: var(--deepPurple-color);
+		font-size: 6.5rem;
+		font-weight: 100;
+		letter-spacing: 0.5rem;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	p {
+		color: var(--navText-color);
+		font-size: 1.5rem;
+		font-weight: 200;
+		display: inline;
+	}
 }

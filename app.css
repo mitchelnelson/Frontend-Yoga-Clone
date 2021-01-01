@@ -1,6 +1,8 @@
 :root {
-  --purple-color: #d7d4ee;
+  --background-color: #d7d4ee;
   --lightBlue-color: #f0eefd;
+  --navText-color: #9e9695;
+  --deepPurple-color: #78699a;
   font-family: "Raleway", sans-serif;
 }
 
@@ -10,56 +12,84 @@
 
 html,
 body {
-  background-color: var(--purple-color);
+  background-color: var(--background-color);
   margin: 0;
 }
 
-.centered {
+.grid-container {
+  background-color: white;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: 15vh 65vh;
+  grid-template-columns: 75vw;
 }
 
-.navbar {
-  width: 75vw;
-  height: 15vh;
-  background-color: white;
-  display: flex;
-  justify-content: flex-end;
+header {
+  color: var(--navText-color);
   align-items: center;
 }
-.navbar span {
-  padding: 1rem;
+header .navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.navbar .icon {
-  color: green;
+header .navbar span {
+  padding: 2rem;
+}
+header .navbar .icon {
+  color: hotpink;
   margin-right: auto;
 }
 
 .content {
-  width: 75vw;
-  height: 65vh;
-  background-color: white;
+  padding: 0 2rem 2rem 2rem;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 31% auto;
+  grid-template-rows: 100%;
+}
+.content figure {
+  margin: 0;
+  overflow: hidden;
+}
+.content figure img {
+  max-width: 100%;
+  max-height: auto;
 }
 .content section {
   display: grid;
-  grid-template-columns: 100px 100px;
-  border: 1px solid hotpink;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 45% auto;
 }
-.content figure {
-  border: 1px solid orange;
-  margin: 0;
+.content section .item {
+  background: linear-gradient(to right top, white, var(--background-color));
 }
-.content figure image {
-  height: 100%;
-  width: 100%;
+.content section .item + .item {
+  background: linear-gradient(to right top, var(--background-color), #a49fc6);
+}
+.content section .long {
+  grid-column: 1/3;
 }
 
-.item {
-  border: 1px solid blue;
+.yoga {
+  padding-left: 2rem;
+}
+.yoga h2 {
+  color: var(--deepPurple-color);
+  font-size: 6.5rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.yoga p {
+  color: var(--navText-color);
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: inline;
 }
 
 /*# sourceMappingURL=app.css.map */
