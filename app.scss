@@ -8,6 +8,7 @@
 
 * {
 	box-sizing: border-box;
+	cursor: default;
 }
 
 html,
@@ -36,19 +37,24 @@ header {
 	.navbar {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		width: 100%;
 		height: 100%;
-		span {
-			padding-left: 6.5vw;
+		span:hover {
+			transform: scale(1.2);
+			transition: linear 0.05s;
 		}
 		.icon {
 			color: var(--deepPurple-color);
 			background-color: var(--lightBlue-color);
 			border-radius: 50%;
 			transform: scale(2);
-			margin-right: auto;
 			margin-left: 1rem;
+			// margin-right: auto;
 			padding-left: 0;
+		}
+		.icon:hover {
+			background-color: hsl(248, 70%, 94%);
 		}
 	}
 }
@@ -116,6 +122,12 @@ section {
 			color: var(--deepPurple-color);
 			border-radius: 50%;
 			transform: scale(2);
+		}
+		svg:hover {
+			background-color: hsla(0, 0%, 100%, 0.829);
+			transform: scale(2.2);
+			box-shadow: 0 0 0.25rem var(--navText-color);
+			transition: linear .05s;
 		}
 	}
 	.item + .item {
