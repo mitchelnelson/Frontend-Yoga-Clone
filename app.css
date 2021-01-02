@@ -1,7 +1,7 @@
 :root {
   --background-color: #d7d4ee;
   --lightBlue-color: #f0eefd;
-  --navText-color: #9e9695;
+  --navText-color: #857c7a;
   --deepPurple-color: #78699a;
   font-family: "Raleway", sans-serif;
 }
@@ -31,6 +31,8 @@ header {
   color: var(--navText-color);
   align-items: center;
   margin: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 header .navbar {
   display: flex;
@@ -41,9 +43,13 @@ header .navbar {
 header .navbar span {
   padding-left: 6.5vw;
 }
-header .navbar #icon {
-  color: hotpink;
+header .navbar .icon {
+  color: var(--deepPurple-color);
+  background-color: var(--lightBlue-color);
+  border-radius: 50%;
+  transform: scale(2);
   margin-right: auto;
+  margin-left: 1rem;
   padding-left: 0;
 }
 
@@ -86,6 +92,7 @@ header .navbar #icon {
   font-size: 1.5rem;
   font-weight: 200;
   display: inline;
+  letter-spacing: 0.2rem;
 }
 
 section .item {
@@ -97,9 +104,18 @@ section .item {
 section .item p {
   align-self: flex-end;
   margin: 0 auto 2rem 2rem;
+  color: var(--navText-color);
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: inline;
+  letter-spacing: 0.2rem;
 }
-section .item span {
+section .item svg {
   margin: 2rem 2rem 0 auto;
+  background-color: white;
+  color: var(--deepPurple-color);
+  border-radius: 50%;
+  transform: scale(2);
 }
 section .item + .item {
   background: linear-gradient(to right top, var(--background-color), #a49fc6);
